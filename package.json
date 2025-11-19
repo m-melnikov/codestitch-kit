@@ -1,7 +1,7 @@
 {
-    "name": "Intermediate-Website-Kit-SASS",
+    "name": "codestitch-kit",
     "version": "2.0.1",
-    "description": "The official CodeStitch Intermediate kit, featuring 11ty, Decap CMS and SASS - all set up for you! Perfect for websites of all sizes.",
+    "description": "Russified version of the official CodeStitch Intermediate kit, featuring 11ty, Decap CMS and SASS.",
     "main": "index.js",
     "scripts": {
         "watch:cms": "npx decap-server",
@@ -9,19 +9,19 @@
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
         "start": "run-p watch:*",
         "build": "run-s build:*",
-		"preview": "cross-env ELEVENTY_ENV=PROD eleventy --serve"
+        "preview": "cross-env ELEVENTY_ENV=PROD eleventy --serve"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS.git"
+        "url": "git+https://github.com/m-melnikov/codestitch-kit.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS/issues"
+        "url": "https://github.com/m-melnikov/codestitch-kit/issues"
     },
-    "homepage": "https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS#readme",
+    "homepage": "https://github.com/m-melnikov/codestitch-kit#readme",
     "dependencies": {
         "@11ty/eleventy": "^3.1.2",
         "@codestitchofficial/eleventy-plugin-minify": "^1.1.3",
@@ -38,5 +38,9 @@
         "npm-run-all2": "^8.0.4",
         "postcss": "^8.5.6",
         "sass": "^1.93.3"
+    },
+    "devDependencies": {
+        "prettier": "^3.6.2",
+        "prettier-plugin-jinja-template": "^2.1.0"
     }
 }
