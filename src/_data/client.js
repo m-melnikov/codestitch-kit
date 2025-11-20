@@ -1,5 +1,5 @@
 module.exports = {
-    name: "Code Stitch Web Designs",
+    name: "Шаблон от CodeStitch",
     email: "help@codestitch.app",
     phoneForTel: "555-779-4407",
     phoneFormatted: "(555) 779-4407",
@@ -20,4 +20,4 @@ module.exports = {
     domain: "https://www.example.com",
     // Passing the isProduction variable for use in HTML templates
     isProduction: process.env.ELEVENTY_ENV === "PROD",
-};
+}

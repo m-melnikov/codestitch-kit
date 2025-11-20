@@ -5,7 +5,11 @@
 <header id="cs-navigation">
     <div class="cs-container">
         <!--Nav Logo-->
-        <a href="/" class="cs-logo" aria-label="Company Name Home page">
+        <a
+            href="/"
+            class="cs-logo"
+            aria-label="Логотип компании Переход на главную"
+        >
             <img
                 src="/assets/svgs/logo-black.svg"
                 alt=""
@@ -16,14 +20,14 @@
             />
         </a>
         <!--Navigation List-->
-        <nav class="cs-nav" aria-label="main navigation">
+        <nav class="cs-nav" aria-label="Навигация">
             <!--Mobile Nav Toggle-->
             <button
                 class="cs-toggle"
                 id="cs-toggle"
                 aria-expanded="false"
                 aria-controls="cs-ul-wrapper"
-                aria-label="mobile menu toggle"
+                aria-label="Мобильное меню"
                 aria-haspopup="menu"
             >
                 <span class="cs-box" aria-hidden="true">
@@ -41,7 +45,7 @@
                             class="cs-li-link {% if page.url == "/" %}cs-active{% endif %}"
                             {% if page.url == "/" %}aria-current="page"{% endif %}
                         >
-                            Home
+                            Главная
                         </a>
                     </li>
                     <li class="cs-li">
@@ -50,7 +54,7 @@
                             class="cs-li-link {% if page.url == "/about/" %}cs-active{% endif %}"
                             {% if page.url == "/about/" %}aria-current="page"{% endif %}
                         >
-                            About
+                            О нас
                         </a>
                     </li>
                     <!-- Note: When copying this dropdown, update the id attribute with an appropriate name (e.g., "services-dropdown-toggle", "products-dropdown-toggle") and ensure the aria-labelledby attribute on the ul matches the button's id -->
@@ -62,7 +66,7 @@
                             aria-expanded="false"
                             id="projects-dropdown-toggle"
                         >
-                            Projects
+                            Проекты
                             <img
                                 class="cs-drop-icon"
                                 src="/assets/svgs/dropdown.svg"
@@ -81,14 +85,14 @@
                                 <a
                                     href="/project-one/"
                                     class="cs-li-link cs-drop-link"
-                                    >Project One</a
+                                    >Объект первый</a
                                 >
                             </li>
                             <li class="cs-drop-li">
                                 <a
                                     href="/project-two/"
                                     class="cs-li-link cs-drop-link"
-                                    >Project Two</a
+                                    >Объект второй</a
                                 >
                             </li>
                         </ul>
@@ -99,7 +103,7 @@
                             class="cs-li-link {% if page.url == "/reviews/" %}cs-active{% endif %}"
                             {% if page.url == "/reviews/" %}aria-current="page"{% endif %}
                         >
-                            Reviews
+                            Отзывы
                         </a>
                     </li>
                     <li class="cs-li">
@@ -108,7 +112,7 @@
                             class="cs-li-link {% if page.url == "/blog/" %}cs-active{% endif %}"
                             {% if page.url == "/blog/" %}aria-current="page"{% endif %}
                         >
-                            Blog
+                            Блог
                         </a>
                     </li>
                     <li class="cs-li cs-hide-on-desktop">
@@ -117,13 +121,13 @@
                             class="cs-li-link {% if page.url == "/contact/" %}cs-active{% endif %}"
                             {% if page.url == "/contact/" %}aria-current="page"{% endif %}
                         >
-                            Contact
+                            Контакты
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <a href="/contact/" class="cs-button-solid cs-nav-button">Contact Us</a>
+        <a href="/contact/" class="cs-button-solid cs-nav-button">Связаться</a>
         <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
         <button
             id="dark-mode-toggle"

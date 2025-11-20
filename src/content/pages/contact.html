@@ -1,5 +1,5 @@
 ---
-title: "Contact | Code Stitch Web Designs"
+title: "Контакты | Шаблон от CodeStitch"
 description: "Meta description for the page"
 permalink: "/contact/"
 ---
@@ -27,10 +27,10 @@ permalink: "/contact/"
 
     <div id="banner-310">
         <div class="cs-container">
-            <span class="cs-int-title">Contact Us</span>
+            <span class="cs-int-title">Свяжитесь с нами</span>
             <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/contact/" class="cs-link cs-active">Contact Us</a>
+                <a href="/" class="cs-link">Главная</a>
+                <a href="/contact/" class="cs-link cs-active">Контакты</a>
             </div>
         </div>
         <!--Background Image-->
@@ -120,8 +120,8 @@ permalink: "/contact/"
         <div class="cs-container">
             <div class="cs-left-section">
                 <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
+                    <span class="cs-topper">Контакты</span>
+                    <h2 class="cs-title">Свяжитесь с нами</h2>
                     <p class="cs-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Ridiculus elementum ullamcorper ipsum porttitor aliquam.
@@ -130,71 +130,71 @@ permalink: "/contact/"
                 </div>
                 <form id="cs-form-265" name="Contact Form" method="post">
                     <label>
-                        Name
+                        Имя
                         <input
                             required
                             type="text"
                             id="name-265"
                             name="name"
-                            placeholder="Name"
+                            placeholder="Имя"
                         />
                     </label>
                     <label>
-                        Email
+                        Адрес почты
                         <input
                             required
                             type="text"
                             id="email-265"
                             name="email"
-                            placeholder="Email"
+                            placeholder="Адрес почты"
                         />
                     </label>
                     <label>
-                        Phone
+                        Номер телефона
                         <input
                             required
                             type="text"
                             id="phone-265"
                             name="phone"
-                            placeholder="Phone"
+                            placeholder="Номер телефона"
                         />
                     </label>
                     <label>
-                        How Did You Find Us
+                        Как вы узнали о нас
                         <input
                             type="text"
                             id="find-265"
                             name="find-us"
-                            placeholder="How did you find us?"
+                            placeholder="Как вы узнали о нас?"
                         />
                     </label>
                     <label class="cs-label-message">
-                        Message
+                        Сообщение
                         <textarea
                             required
                             name="Message"
                             id="message-265"
-                            placeholder="Write message..."
+                            placeholder="Ваше сообщение..."
                         ></textarea>
                     </label>
                     <button class="cs-button-solid cs-submit" type="submit">
-                        Submit Message
+                        Отправить
                     </button>
                 </form>
             </div>
             <div class="cs-right-section">
                 <!--Email-->
-                <span class="cs-header">Email</span>
+                <span class="cs-header">Адрес почты</span>
                 <a class="cs-link" href="mailto:{{ client.email }}"
                     >{{ client.email }}</a
                 >
                 <!--Phone-->
-                <span class="cs-header">Phone</span>
+                <span class="cs-header">Номер телефона</span>
                 <a class="cs-link" href="tel:{{ client.phoneForTel }}"
                     >{{ client.phoneFormatted }}</a
                 >
                 <!--Address-->
-                <span class="cs-header">Address</span>
+                <span class="cs-header">Адрес</span>
                 <a class="cs-link" href="{{ client.address.mapLink }}">
                     {{ client.address.lineOne }}, <br />
                     {{ client.address.lineTwo }}, <br />

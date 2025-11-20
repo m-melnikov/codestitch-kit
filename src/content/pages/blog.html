@@ -1,5 +1,5 @@
 ---
-title: "Blog | Code Stitch Web Designs"
+title: "Блог | Шаблон от CodeStitch"
 description: "Meta description for the page"
 permalink: "/blog/"
 ---
@@ -22,10 +22,10 @@ permalink: "/blog/"
 
     <div id="banner-310">
         <div class="cs-container">
-            <span class="cs-int-title">Blog</span>
+            <span class="cs-int-title">Блог</span>
             <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/blog/" class="cs-link cs-active">Blog</a>
+                <a href="/" class="cs-link">Главная</a>
+                <a href="/blog/" class="cs-link cs-active">Блог</a>
             </div>
         </div>
         <!--Background Image-->
@@ -114,7 +114,7 @@ permalink: "/blog/"
     <div id="blog-listing">
         <div class="cs-container">
             {% if collections.post | length == 0 %}
-                <h1 class="cs-title">No Recent Posts</h1>
+                <h1 class="cs-title">Скоро появятся новые статьи</h1>
             {% else %}
                 {%- for post in collections.post | reverse -%}
                     <article class="cs-article">
@@ -221,7 +221,7 @@ permalink: "/blog/"
                                 {{ post.data.description }}
                             </p>
                             <a href="{{ post.url }}" class="cs-button-solid"
-                                >Continue Reading</a
+                                >Читать дальше</a
                             >
                         </div>
                     </article>
