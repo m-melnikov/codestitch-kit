@@ -5,22 +5,22 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 // 📦 Plugin Imports
-const pluginImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
-const pluginMinifier = require("@codestitchofficial/eleventy-plugin-minify");
-const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
+const pluginImages = require("@codestitchofficial/eleventy-plugin-sharp-images")
+const pluginMinifier = require("@codestitchofficial/eleventy-plugin-minify")
+const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap")
 
 // ⚙️ Configuration Files
-const configSitemap = require("./src/config/plugins/sitemap");
-const configImages = require("./src/config/plugins/images");
+const configSitemap = require("./src/config/plugins/sitemap")
+const configImages = require("./src/config/plugins/images")
 
 // 🔧 Processing Functions
-const sass = require("./src/config/processors/sass");
-const javascript = require("./src/config/processors/javascript");
+const sass = require("./src/config/processors/sass")
+const javascript = require("./src/config/processors/javascript")
 
 // 🛠️ Utilities
-const filterPostDate = require("./src/config/filters/postDate");
-const filterIsoDate = require("./src/config/filters/isoDate");
-const isProduction = process.env.ELEVENTY_ENV === "PROD";
+const filterPostDate = require("./src/config/filters/postDate")
+const filterIsoDate = require("./src/config/filters/isoDate")
+const isProduction = process.env.ELEVENTY_ENV === "PROD"
 
 module.exports = function (eleventyConfig) {
     // ═════════════════════════════════════════════════════════════════════════
@@ -35,8 +35,8 @@ module.exports = function (eleventyConfig) {
      * - JavaScript: Compiled with esbuild for modern bundling
      * - CSS/SASS: Processed and minified for production, including a PostCSS pipeline
      */
-    eleventyConfig.on("eleventy.after", javascript);
-    eleventyConfig.on("eleventy.after", sass);
+    eleventyConfig.on("eleventy.after", javascript)
+    eleventyConfig.on("eleventy.after", sass)
 
     // ═════════════════════════════════════════════════════════════════════════
     // PLUGINS
@@ -49,14 +49,14 @@ module.exports = function (eleventyConfig) {
      * Resize and optimize images for better performance using {% getUrl %}
      * Documentation: https://github.com/CodeStitchOfficial/eleventy-plugin-sharp-images
      */
-    eleventyConfig.addPlugin(pluginImages, configImages);
+    eleventyConfig.addPlugin(pluginImages, configImages)
 
     /*
      * 🗺️ Sitemap Generation
      * Creates sitemap.xml automatically using domain from _data/client.json
      * Documentation: https://github.com/quasibit/eleventy-plugin-sitemap
      */
-    eleventyConfig.addPlugin(pluginSitemap, configSitemap);
+    eleventyConfig.addPlugin(pluginSitemap, configSitemap)
 
     /*
      * 📦 Production Minification
@@ -65,7 +65,7 @@ module.exports = function (eleventyConfig) {
      * Documentation: https://github.com/CodeStitchOfficial/eleventy-plugin-minify
      */
     if (isProduction) {
-        eleventyConfig.addPlugin(pluginMinifier);
+        eleventyConfig.addPlugin(pluginMinifier)
     }
 
     // ═════════════════════════════════════════════════════════════════════════
@@ -74,9 +74,9 @@ module.exports = function (eleventyConfig) {
     // Learn more: https://www.11ty.dev/docs/copy/
     // ═════════════════════════════════════════════════════════════════════════
 
-    eleventyConfig.addPassthroughCopy("./src/assets"); // Static assets
-    eleventyConfig.addPassthroughCopy("./src/admin"); // CMS admin files
-    eleventyConfig.addPassthroughCopy("./src/_redirects"); // Redirect rules
+    eleventyConfig.addPassthroughCopy("./src/assets") // Static assets
+    eleventyConfig.addPassthroughCopy("./src/admin") // CMS admin files
+    eleventyConfig.addPassthroughCopy("./src/_redirects") // Redirect rules
 
     // ═════════════════════════════════════════════════════════════════════════
     // FILTERS
@@ -90,7 +90,7 @@ module.exports = function (eleventyConfig) {
      * Usage: {{ "2023-12-02" | postDate }}
      * Powered by Luxon: https://moment.github.io/luxon/api-docs/
      */
-    eleventyConfig.addFilter("postDate", filterPostDate);
+    eleventyConfig.addFilter("postDate", filterPostDate)
 
     /*
      * 📅 ISO Date Formatting Filter
@@ -98,7 +98,7 @@ module.exports = function (eleventyConfig) {
      * Usage: {{ "2023-12-02" | isoDate }}
      * Powered by Luxon: https://moment.github.io/luxon/api-docs/
      */
-    eleventyConfig.addFilter("isoDate", filterIsoDate);
+    eleventyConfig.addFilter("isoDate", filterIsoDate)
 
     // ═════════════════════════════════════════════════════════════════════════
     // SHORTCODES
@@ -112,7 +112,7 @@ module.exports = function (eleventyConfig) {
      * Usage: {% year %}
      * Updates automatically with each build
      */
-    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`)
 
     // ═════════════════════════════════════════════════════════════════════════
     // BUILD CONFIGURATION
@@ -127,5 +127,5 @@ module.exports = function (eleventyConfig) {
             data: "_data", // Global data files directory
         },
         htmlTemplateEngine: "njk", // Nunjucks for HTML templates
-    };
-};
+    }
+}
